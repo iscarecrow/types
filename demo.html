@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>types</title>
+</head>
+<body>
+  <div id="content1">
+    
+  </div>
+  <div id="content2">
+    
+  </div>
+
+  <div id="content3">
+    
+  </div>
+
+</body>
+<script type="text/javascript" src="./types.js"></script>
+<script type="text/javascript">
+  var a0 = 32323;
+  var a1 = 'skdjkf';
+  var a2 = true;
+  var a3 = undefined;
+  var a4 = null;
+  var a5 = [1,2,3,4];
+  var a6 = {name:122,age:33};
+  var a7 = function(){
+    console.log('sss');
+  };
+
+
+  var b0 = new String('eee');
+  var b1 = new Number(222);
+  var b2 = new Boolean(true);
+  var b3 = new Date();
+  var b4 = new Array(1,2,3);
+  var b5 = new Object();
+  var b6 = new Error();
+  var b7 = /abc/g;
+  var b8 = new RegExp("meow");
+
+
+  // 基本类型 demo1
+  var cnt1 = document.querySelector('#content1');
+  var testCase1 = [a0,a1,a2,a3,a4,a5,a6,a7];
+  var c1 = '<h3 style="color:red">demo1</h3>';
+  for (var i=0;i<testCase1.length;i++){
+    c1 += testCase1[i] + "  :  " + types.detect1(testCase1[i]) + "<br>";
+  };
+
+  //  demo2
+  var cnt2 = document.querySelector('#content2');
+  var testCase2 = [b0,b1,b2,b3,b4,b5,b6,b7];
+  var c2 = '<h3 style="color:red">demo2</h3>';
+  for (var i=0;i<testCase2.length;i++){
+    c2 += testCase2[i] + "  :  " + types.detect1(testCase2[i]) + "<br>";
+  };
+
+
+  //  demo3
+  var cnt3 = document.querySelector('#content3');
+  var testCase3 = [a0,a1,a2,a3,a4,a5,a6,a7,b0,b1,b2,b3,b4,b5,b6,b7,b8];
+  var c3 = '<h3 style="color:red">demo3</h3>';
+  for (var i=0;i<testCase3.length;i++){
+    c3 += testCase3[i] + "  :  " + types.detect2(testCase3[i]) + "<br>";
+  };
+
+
+  cnt1.innerHTML = c1;
+  cnt2.innerHTML = c2;
+  cnt3.innerHTML = c3;
+
+
+</script>
+</html>
